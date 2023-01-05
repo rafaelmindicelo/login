@@ -22,12 +22,10 @@ describe('Create User', () => {
     const users = await listAllUsers.execute();
 
     expect(users).toHaveLength(1);
-    expect(users[0]).toHaveProperty('_id');
+    expect(users[0]).toHaveProperty('id');
   });
 
   it('should not be able to create an existing user', async () => {
-    const users = await listAllUsers.execute();
-
     await createUserService.execute(
       makeUser({
         email: 'new-email-example@test.com',
@@ -42,6 +40,7 @@ describe('Create User', () => {
       ),
     ).rejects.toEqual(new Error('User already exists.'));
 
+    const users = await listAllUsers.execute();
     expect(users).toHaveLength(2);
   });
 
