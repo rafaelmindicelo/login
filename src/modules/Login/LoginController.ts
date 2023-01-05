@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { PrismaUsersRepository } from "../../repositories/prisma/PrismaUsersRepository";
+import { PrismaUsersRepository } from '../../repositories/prisma/PrismaUsersRepository';
 import { Login } from './LoginService';
 
 const SECRET = process.env.SECRET as string;
@@ -14,9 +14,12 @@ export class LoginController {
 
     try {
       const user = await login.execute({ email, password });
-      const token = jwt.sign({ userId: user.id, userEmail: user.email }, SECRET, { expiresIn: 300 });
+      const token = jwt.sign(
+        { userId: user.id, userEmail: user.email },
+        SECRET,
+        { expiresIn: 300 },
+      );
       return res.status(200).json({ auth: true, token }).send();
-
     } catch (error) {
       if (error instanceof Error) {
         return res.status(401).json({ error: error.message }).send();

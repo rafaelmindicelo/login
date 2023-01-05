@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { PrismaUsersRepository } from '../../repositories/prisma/PrismaUsersRepository';
-import { CreateUserService } from "./CreateUserService";
+import { CreateUserService } from './CreateUserService';
 
 export class CreateUserController {
   async handle(req: Request, res: Response) {
@@ -14,13 +14,13 @@ export class CreateUserController {
       await createUser.execute({
         name,
         email,
-        password
+        password,
       });
 
-      return res.status(201).send()
+      return res.status(201).send();
     } catch (error) {
       if (error instanceof Error) {
-        return res.status(400).json({ error: error.message }).send()
+        return res.status(400).json({ error: error.message }).send();
       }
     }
   }

@@ -1,7 +1,7 @@
-import { User } from "../entities/User";
+import { User } from '../entities/User';
 
 export interface IUsersRepository {
   create(user: User): Promise<void>;
-  findAll(): Promise<Partial<User[] | []>>;
+  findAll(): Promise<User[] | []>;
   findOneByEmail(email: string): Promise<User | null>;
 }

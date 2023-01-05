@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { PrismaUsersRepository } from "../../repositories/prisma/PrismaUsersRepository";
-import { ListUsers } from "./ListUsersService";
+import { PrismaUsersRepository } from '../../repositories/prisma/PrismaUsersRepository';
+import { ListUsers } from './ListUsersService';
 
 export class ListUsersController {
   async handle(req: Request, res: Response) {
@@ -9,7 +9,6 @@ export class ListUsersController {
 
     const users = await listUsers.execute();
 
-    return res.json(users)
+    return res.json(users);
   }
 }
-
