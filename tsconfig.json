@@ -7,6 +7,13 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@helpers/*": ["./src/helpers/*"],
+      "@repositories/*": ["./src/repositories/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@converters/*": ["./src/converters/*"],
+      "@database/*": ["./src/database/*"]
+    }
   }
 }

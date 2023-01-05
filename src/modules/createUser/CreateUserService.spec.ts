@@ -1,6 +1,6 @@
-import { IUsersRepository } from 'src/repositories/IUsersRepository';
-import { makeUser } from '../../helpers/factories/MakeUser';
-import { UsersRepositoryInMemory } from '../../repositories/in-memory/UsersRepositoryInMemory';
+import { IUsersRepository } from '@repositories/IUsersRepository';
+import { makeUser } from '@helpers/factories/MakeUser';
+import { UsersRepositoryInMemory } from '@repositories/in-memory/UsersRepositoryInMemory';
 import { ListUsers } from '../ListUsers/ListUsersService';
 import { CreateUserService } from './CreateUserService';
 

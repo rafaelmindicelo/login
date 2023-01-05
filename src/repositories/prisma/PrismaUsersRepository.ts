@@ -1,6 +1,6 @@
-import { UserConverter } from '../../converters/UserConverter';
-import { prisma } from '../../database/client';
-import { User } from '../../entities/User';
+import { UserConverter } from '@converters/UserConverter';
+import { prisma } from '@database/client';
+import { User } from '@entities/User';
 import { IUsersRepository } from '../IUsersRepository';
 
 export class PrismaUsersRepository implements IUsersRepository {

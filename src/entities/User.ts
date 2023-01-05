@@ -1,4 +1,4 @@
-import { Replace } from '../helpers/Replace';
+import { Replace } from '@helpers/Replace';
 import { v4 as uuid } from 'uuid';
 
 export interface UserProps {

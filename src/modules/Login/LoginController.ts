@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { PrismaUsersRepository } from '../../repositories/prisma/PrismaUsersRepository';
+import { PrismaUsersRepository } from '@repositories/prisma/PrismaUsersRepository';
 import { Login } from './LoginService';
 
 const SECRET = process.env.SECRET as string;

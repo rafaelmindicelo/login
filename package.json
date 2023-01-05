@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsnd --respawn src/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register src/server.ts",
     "test": "jest"
   },
   "author": "Rafael Mindicelo",
@@ -21,6 +21,7 @@
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.2",
     "typescript": "^4.9.4"
   },
   "dependencies": {

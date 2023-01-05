@@ -1,4 +1,4 @@
-import { IUsersRepository } from '../../repositories/IUsersRepository';
+import { IUsersRepository } from '@repositories/IUsersRepository';
 import bcrypt from 'bcrypt';
 import { CreateUserRequest } from './CreateUserRequest';
 

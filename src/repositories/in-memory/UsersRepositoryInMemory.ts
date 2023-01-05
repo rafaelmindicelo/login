@@ -1,6 +1,5 @@
 import { IUsersRepository } from '../IUsersRepository';
-import { v4 as uuid } from 'uuid';
-import { User } from '../../entities/User';
+import { User } from '@entities/User';
 
 export class UsersRepositoryInMemory implements IUsersRepository {
   private users: User[] = [];

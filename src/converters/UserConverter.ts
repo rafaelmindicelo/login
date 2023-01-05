@@ -1,5 +1,5 @@
 import { User as RawUser } from '@prisma/client';
-import { User } from '../entities/User';
+import { User } from '@entities/User';
 
 export class UserConverter {
   static toPrisma(user: User) {

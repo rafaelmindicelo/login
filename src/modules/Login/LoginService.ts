@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { IUsersRepository } from '../../repositories/IUsersRepository';
+import { IUsersRepository } from '@repositories/IUsersRepository';
 
 export interface LoginRequest {
   email: string;
